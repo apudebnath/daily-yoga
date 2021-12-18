@@ -2,7 +2,7 @@
 
 Welcome all. This is an ultimate react project, with Material UI. It's an organized project with the targeted view where user fill the perfect usability and hope enjoy tho use.
 
-This project was  with [Create React App](https://daily-yoga-a.firebaseapp.com/).
+This project was  with [Daily Yoga Live](https://daily-yoga-a.firebaseapp.com/).
 
 
 ### Features and Benefits-
