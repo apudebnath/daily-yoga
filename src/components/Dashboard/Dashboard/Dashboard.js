@@ -6,15 +6,12 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { Button, Container, Grid, ListItemButton } from '@mui/material';
+import { Button, ListItemButton } from '@mui/material';
 import { Link, Outlet } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
 import useAuth from './../../../Hooks/useAuth';
@@ -41,7 +38,7 @@ function Dashboard(props) {
 const {navItem, mobileItem } = useStyle();
   const drawer = (
     <Box>
-      <Toolbar sx={{background: 'orange', display: "flex", justifyContent: 'center'}}>
+      <Toolbar sx={{background: 'orange', display: "flex", justifyContent: 'center', py: 2}}>
         <Link className={mobileItem} to="/home">
           <ListItemButton sx={{ fontSize: '38px'}}>
             <ListItemText style={{color: 'white', fontSize: '38px'}}>Home</ListItemText>
@@ -111,10 +108,10 @@ const {navItem, mobileItem } = useStyle();
           sx={{
             width: { sm: `calc(100% - ${drawerWidth}px)` },
             ml: { sm: `${drawerWidth}px` },
-            background: 'gray'
+            background: 'gray',
           }}
         >
-          <Toolbar>
+          <Toolbar sx={{py: 3}}>
             <IconButton
               color="inherit"
               aria-label="open drawer"
@@ -124,7 +121,7 @@ const {navItem, mobileItem } = useStyle();
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" noWrap component="div">
+            <Typography variant="h6" noWrap component="div" >
               DashBoard
             </Typography>
           </Toolbar>

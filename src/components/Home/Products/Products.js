@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { experimentalStyled as styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import { NavLink } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -40,7 +40,7 @@ const Products = () => {
                                     <Typography variant='h6' style={{color: 'black'}}>Price: $ {product.price}</Typography>
                                 </Box>
                                 <Typography>
-                                    <NavLink to={`/purchase/${product._id}`} style={{textDecoration: 'none'}}><Button variant='contained' sx={{background: 'orange'}}>Details</Button></NavLink>
+                                    <Link to={`/purchase/${product._id}`} style={{textDecoration: 'none'}}><Button variant='contained' sx={{background: 'orange'}}>Details</Button></Link>
                                 </Typography>
                             </Grid>
                         </Item>

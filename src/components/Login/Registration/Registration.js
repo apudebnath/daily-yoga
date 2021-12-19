@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import image from '../../../images/login2.jpg';
+import Footer from '../../Shared/Footer/Footer';
 const Registration = () => {
     const [registerData, setRegisterData] = useState({});
     const {registerWithEmail, user, isLoading, authError, googleSignIn} = useAuth();
@@ -31,6 +32,7 @@ const Registration = () => {
         googleSignIn();
     }
     return (
+        <>
         <Container sx={{my: 8}}>
             <Box sx={{flexGrow: 1}} style={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingBottom: '35px'}}>
                 <Card sx={{ display: 'flex',justifyContent: 'center', alignItems: 'center'}}  style={{width: '70%', height: '70%'}}>
@@ -97,6 +99,8 @@ const Registration = () => {
                 </Card>
             </Box>    
         </Container>
+        <Footer/>
+        </>
     );
 };
 

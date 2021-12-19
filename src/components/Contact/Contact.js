@@ -1,11 +1,12 @@
 import { Button, Container, Grid, TextField, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
+import Footer from '../Shared/Footer/Footer';
 
 const image = ('https://i.ibb.co/K24phq2/banner1.jpg');
 const bannerBackground = {
     background: `url(${image})`,
-    backgroundColor: 'rgba(28, 76, 94, 0.99 )',
+    backgroundColor: 'rgba(28, 74, 94, 0.6)',
     backgroundBlendMode: 'darken, luminosity',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'scroll',
@@ -14,6 +15,7 @@ const bannerBackground = {
 }
 const Contact = () => {
     return (
+        <>
         <Box style={bannerBackground} sx={{py: 8}}>
             <Container sx={{py: 8}}>
             <Grid container spacing={{ xs: 2, md: 5 }} columns={{ xs: 4, sm: 6, md: 12 }} sx={{pt: 5 }}>
@@ -60,6 +62,8 @@ const Contact = () => {
             </Grid>
             </Container>
         </Box>
+        <Footer/>
+        </>
     );
 };
 

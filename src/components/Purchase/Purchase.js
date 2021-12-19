@@ -1,26 +1,23 @@
 import { Box, Button, Card, CircularProgress, Container, Grid, Paper, TextField, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 
     
 const Purchase = () => {
     const {id} = useParams();
-    const [product, setProduct] = useState({})
+    const [product, setProduct] = useState({});
     const {user,isLoading} = useAuth();
     const basicInfo = {userName: user.displayName, email: user.email}
     const [orderData, newOrderData] = useState({basicInfo})
     // get data database to ui
     useEffect(() => {
-        const url = `http://localhost:5000/products/${id}`;
+        const url = (`http://localhost:5000/products/${id}`)
         fetch(url)
         .then(res => res.json())
         .then(data => setProduct(data))
-    }, [])
-    console.log(user)
-    console.log(basicInfo)
-    console.log(orderData)
+    }, [id])
     const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -148,7 +145,9 @@ const Purchase = () => {
                                     defaultValue={product?.price}
                                     onBlur={handleOnBlur}
                                     ></TextField>
+                                    <Link to="/dashboard/payment" style={{textDecoration: 'none'}}>
                                     <Button type="submit" sx={{width: '60%'}} variant='contained' style={{background: 'orange'}}>Submit Order</Button>
+                                    </Link>
                                 </form>
                             </Card>
                         </Box>

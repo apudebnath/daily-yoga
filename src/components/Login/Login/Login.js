@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import image from '../../../images/login3.jpg'
+import Footer from '../../Shared/Footer/Footer';
 const Login = () => {
     const [loginData, setLoginData] = useState({});
     const {signInWithEmail, user, isLoading, authError, googleSignIn} = useAuth();
@@ -28,6 +29,7 @@ const handleGoogleLogin = () => {
 }
 
     return (
+        <>
         <Container sx={{my: 8}}>
             <Box sx={{flexGrow: 1}} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                 <Card sx={{ display: 'flex',justifyContent: 'center', alignItems: 'center'}}  style={{width: '70%', height: '70%'}}>
@@ -80,6 +82,8 @@ const handleGoogleLogin = () => {
                 </Card>  
             </Box>    
         </Container>
+        <Footer/>
+        </>
     );
 };
 

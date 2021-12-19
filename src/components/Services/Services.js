@@ -1,9 +1,10 @@
-import { Button, Container, Grid, Link, Typography } from '@mui/material';
+import { Button, Container, Grid, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { experimentalStyled as styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import { NavLink } from 'react-router-dom';
+import {Link } from 'react-router-dom';
+import Footer from '../Shared/Footer/Footer';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -22,6 +23,7 @@ const Services = () => {
         .then(data => setProducts(data))
     } , [])
     return (
+        <>
         <Container sx={{py: 5}}>
             <h2>Exclusive Packages</h2>
             <Box sx={{ flexGrow: 1 }}>
@@ -31,7 +33,9 @@ const Services = () => {
                         <Item>
                             <img style={{width: '100%'}} src={product.image} alt=""/>
 
-                            <Typography variant='h6'>{product.title}</Typography>
+                            <Typography variant='h6'>
+                                {product.title}
+                            </Typography>
                             <hr />
                             <Grid item xs={12} style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                                 <Box style={{textAlign: 'left'}}>
@@ -39,7 +43,7 @@ const Services = () => {
                                     <Typography variant='h6' style={{color: 'black'}}>Price: $ {product.price}</Typography>
                                 </Box>
                                 <Typography>
-                                    <NavLink to={`/purchase/${product._id}`} style={{textDecoration: 'none'}}><Button variant='contained' sx={{background: 'orange'}}>Details</Button></NavLink>
+                                    <Link to={`/purchase/${product._id}`} style={{textDecoration: 'none'}}><Button variant='contained' sx={{background: 'orange'}}>Details</Button></Link>
                                 </Typography>
                             </Grid>
                         </Item>
@@ -47,8 +51,10 @@ const Services = () => {
                     )
                 }
             </Grid>
-    </Box>
-        </Container>
+        </Box>
+    </Container>
+    <Footer/>
+    </>
     );
 };
 

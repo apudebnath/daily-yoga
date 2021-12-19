@@ -113,7 +113,7 @@ const Navigation = () => {
     return (
         <div>
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static" style={{background: 'orange',}} sx={{py: 1}}>
+                <AppBar position="static" style={{background: '#022B3B',}} sx={{py: 1}}>
                   <Toolbar>
                     <IconButton
                       size="large"
@@ -127,7 +127,7 @@ const Navigation = () => {
                       <MenuIcon />
                     </IconButton>
                     <Typography className={logo} variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                      <Link to='/' style={{textDecoration: 'none', fontSize: '38px', color: '#02346C'}}>Daily Yoga</Link>
+                      <Link to='/' style={{textDecoration: 'none', fontSize: '38px', color: '#f0f0f0'}}>Daily Yoga</Link>
                     </Typography>
                     <Box className={navContainer}>
                         <Link className={navItem} to="home"><Button color="inherit"className='mx-5 text-lg text-blue-500'>Home</Button></Link>
