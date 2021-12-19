@@ -8,8 +8,8 @@ import image4 from '../../../images/icon0144.png';
 const ServicePoint = () => {
     return (
         <Container sx={{mb:5}}>
-            <Box sx={{ flexGrow: 1 }} style={{marginTop: '-70px', background: '#f5f6f6', borderRadius: '15px', padding: '40px',  }}>
-                <Typography sx={{pb: 5, fontWeight: 'semiold'}} variant="h4">Offer Best Service for You</Typography>
+            <Box sx={{ flexGrow: 1 }} style={{marginTop: '-70px', background: '#022B3B', borderRadius: '15px', padding: '40px',  }}>
+                <Typography sx={{pb: 5, fontWeight: 'bold',color: '#f0f1f1'}} variant="h4">Offer Best Service for You</Typography>
                 <Grid container spacing={{ xs: 1, md: 3 }} columns={{ xs: 3, sm: 6, md: 12 }} style={{ }}>
                     <Grid item xs={3} sm={3} md={3} >
                         <Card sx={{ maxWidth: 345, borderRadius: 5, }} >
