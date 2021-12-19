@@ -3,7 +3,7 @@ import { Box } from '@mui/system';
 import React, { useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
-import image from '../../../images/login1.jpg'
+import image from '../../../images/login3.jpg'
 const Login = () => {
     const [loginData, setLoginData] = useState({});
     const {signInWithEmail, user, isLoading, authError, googleSignIn} = useAuth();
@@ -69,11 +69,11 @@ const handleGoogleLogin = () => {
                                     <span> New user? Please Register</span>
                                 </NavLink>
                                 <br />
-                                <Button type="submit" sx={{width: '60%', m: 1}} variant="contained">Login</Button>
+                                <Button type="submit" sx={{width: '60%', m: 1, background: 'orange'}} variant="contained">Login</Button>
                             </form>
                             {user.email && <Typography sx={{textColor: 'green'}}>Congrats, Login successfully</Typography>}
                             {authError && <Typography sx={{textColor: 'red'}}>{authError}</Typography>}
-                            <Button onClick={handleGoogleLogin} sx={{width: '60%', m: 3}} variant="contained" >GOOGLE LOGIN</Button>
+                            <Button onClick={handleGoogleLogin} sx={{width: '60%', m: 3, background: 'orange'}} variant="contained" >GOOGLE LOGIN</Button>
                             </Box>
                         </Grid>
                     </Grid>

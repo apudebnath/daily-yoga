@@ -17,6 +17,7 @@ import Reviews from './components/Dashboard/Reviews/Reviews';
 import MakeAdmin from './components/Dashboard/MakeAdmin/MakeAdmin';
 import Purchase from './components/Purchase/Purchase';
 import AdminRoute from './components/Login/AdminRoute/AdminRoute';
+import Contact from './components/Contact/Contact';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="home" element={<Home/>}></Route>
             <Route path="login" element={<Login/>}></Route>
             <Route path="register" element={<Registration/>}></Route>
+            <Route path="contact" element={<Contact />}></Route>
             <Route path="/purchase/:id" element={<Purchase/>}></Route>
             <Route path="services" element={<PrivateRoute><Services/></PrivateRoute>}></Route>
             <Route path="dashboard" element={<PrivateRoute><Dashboard/></PrivateRoute>}>
@@ -38,9 +40,9 @@ function App() {
               <Route path="myorders" element={<MyOrders />}></Route>
               <Route path="payment" element={<Payment />}></Route>
               <Route path="reviews" element={<Reviews />}></Route>
-
             </Route>
-          </Routes> 
+          </Routes>
+           
       </AuthProvider>
     </div>
   );

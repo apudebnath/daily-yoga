@@ -23,9 +23,9 @@ const Products = () => {
     } , [])
 
     return (
-        <Container sx={{py: 5}}>
-            <h2>Exclusive Packages</h2>
-            <Box sx={{ flexGrow: 1 }}>
+        <Container sx={{py: 8}}>
+            <Typography sx={{pb: 5, fontWeight: 'semibold'}} variant="h4">Exclusive Packages</Typography>
+            <Box sx={{ flexGrow: 1}}>
             <Grid container spacing={{ xs: 3, md: 5 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                 {
                     products.slice(0,6).map(product => <Grid item xs={4} sm={4} md={4} key={product._id}>

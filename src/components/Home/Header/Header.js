@@ -21,14 +21,14 @@ const Header = () => {
                     <Grid container>
                         <Grid item xs={12} sm={12} md={6} >
                             <Box sx={{py: 8}} style={{textAlign: 'left'}}>
-                                <Typography variant='h3' style={{textAlign: 'left', color: 'white'}}>
+                                <Typography variant='h2' style={{textAlign: 'left', color: 'white'}} sx={{lineHeight: 0.9, pb: 1}}>
                                     Health is the power fo success in your LIFE
                                 </Typography>
                                 <Typography variant='h6' style={{textAlign: 'left', paddingBottom: '30px', color: '#4C4C4C'}}>
                                     Yoga is a most powerful way to maintain and minimize your daily life stress and keep fresh mentally and physically.
                                 </Typography>
                                 <Link to="/services" style={{textDecoration: 'none'}}>
-                                    <Button sx={{ background: 'orange'}} variant="contained">Know More</Button>
+                                    <Button sx={{ background: 'orange',py: 2, px:4}} variant="contained">Know More</Button>
                                 </Link>
                             </Box>
                         </Grid>

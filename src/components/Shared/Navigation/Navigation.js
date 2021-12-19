@@ -14,10 +14,8 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+
 
 
 const Navigation = () => {
@@ -72,6 +70,12 @@ const Navigation = () => {
                     </ListItem>
                 </Link>
               <Divider />
+                <Link className={mobileItem} to="contact">
+                    <ListItem button sx={{ textAlign: 'center' }}>
+                        <ListItemText>Contact</ListItemText>
+                    </ListItem>
+                </Link>
+              <Divider />
                 <Link className={mobileItem} to="register">
                     <ListItem button sx={{ textAlign: 'center' }}>
                         <ListItemText>Register</ListItemText>
@@ -109,7 +113,7 @@ const Navigation = () => {
     return (
         <div>
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static">
+                <AppBar position="static" style={{background: 'orange',}} sx={{py: 1}}>
                   <Toolbar>
                     <IconButton
                       size="large"
@@ -123,18 +127,19 @@ const Navigation = () => {
                       <MenuIcon />
                     </IconButton>
                     <Typography className={logo} variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                      Daily Yoga
+                      <Link to='/' style={{textDecoration: 'none', fontSize: '38px', color: '#02346C'}}>Daily Yoga</Link>
                     </Typography>
                     <Box className={navContainer}>
                         <Link className={navItem} to="home"><Button color="inherit"className='mx-5 text-lg text-blue-500'>Home</Button></Link>
                         <Link className={navItem} to="services"><Button color="inherit" >Services</Button></Link>
+                        <Link className={navItem} to="contact"><Button color="inherit" >Contact</Button></Link>
                         <Link className={navItem} to="register"><Button color="inherit" >Register</Button></Link>
                         {
                            user.email ?
                            <>
                            <Link className={navItem} to="dashboard"><Button color="inherit" >Dashboard</Button></Link>
                         
-                           <button onClick={logOut} className='mx-3 text-lg text-blue-500 rounded'><Button color="inherit">Logout</Button></button>
+                           <Button onClick={logOut} className='mx-3 text-lg text-blue-500 rounded'><Button color="inherit" style={{color: 'orange',background: 'white', border: '1px solid white',}}>Logout</Button></Button>
                            </> 
                            :
                            <Link className={navItem} to="login" ><Button color="inherit" className='mx-5 text-lg text-blue-500'>Login</Button></Link>

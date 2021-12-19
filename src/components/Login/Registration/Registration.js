@@ -32,7 +32,7 @@ const Registration = () => {
     }
     return (
         <Container sx={{my: 8}}>
-            <Box sx={{flexGrow: 1}} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <Box sx={{flexGrow: 1}} style={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingBottom: '35px'}}>
                 <Card sx={{ display: 'flex',justifyContent: 'center', alignItems: 'center'}}  style={{width: '70%', height: '70%'}}>
                     <Grid container >
                         <Grid item sx={12} sm={12} md={6}>
@@ -87,11 +87,11 @@ const Registration = () => {
                                     <span>Already Registered? Please Login</span>
                                 </NavLink>
                                 <br />
-                                <Button type="submit" sx={{width: '60%', m: 1}} variant="contained">Register</Button>
+                                <Button type="submit" sx={{width: '60%', m: 1, background: 'orange'}} variant="contained">Register</Button>
                             </form>
                             {user.email && <Typography sx={{textColor: 'green'}}>Congrats, Register successfully</Typography>}
                             {authError && <Typography sx={{textColor: 'red'}}>{authError}</Typography>}
-                            <Button onClick={handleGoogleLogin} sx={{width: '60%', m: 3}} variant="contained">GOOGLE LOGIN</Button>
+                            <Button onClick={handleGoogleLogin} sx={{width: '60%', m: 3, background: 'orange'}} variant="contained">GOOGLE LOGIN</Button>
                         </Grid>
                     </Grid>
                 </Card>

@@ -11,11 +11,10 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { Button, Grid, ListItemButton } from '@mui/material';
+import { Button, Container, Grid, ListItemButton } from '@mui/material';
 import { Link, Outlet } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
 import useAuth from './../../../Hooks/useAuth';
@@ -41,8 +40,8 @@ function Dashboard(props) {
 });
 const {navItem, mobileItem } = useStyle();
   const drawer = (
-    <div>
-      <Toolbar sx={{bgcolor: 'orange', display: "flex", justifyContent: 'center'}}>
+    <Box>
+      <Toolbar sx={{background: 'orange', display: "flex", justifyContent: 'center'}}>
         <Link className={mobileItem} to="/home">
           <ListItemButton sx={{ fontSize: '38px'}}>
             <ListItemText style={{color: 'white', fontSize: '38px'}}>Home</ListItemText>
@@ -50,56 +49,56 @@ const {navItem, mobileItem } = useStyle();
         </Link>
       </Toolbar>
       <Divider />
-      <List>
+      <List sx={{background: 'gray'}}>
         {admin && <Box>
           <Link className={mobileItem} to="manageallorders">
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton sx={{ textAlign: 'center', color: 'white'}}>
                 <ListItemText>ManageAllOrders</ListItemText>
             </ListItemButton>
           </Link>
           <Divider />
           <Link className={mobileItem} to="addproduct">
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton sx={{ textAlign: 'center', color: 'white' }}>
                 <ListItemText>AddProduct</ListItemText>
             </ListItemButton>
           </Link>
           <Divider />
           <Link className={mobileItem} to="makeadmin">
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton sx={{ textAlign: 'center', color: 'white' }}>
                 <ListItemText>MakeAdmin</ListItemText>
             </ListItemButton>
           </Link>
         </Box>}
         <Divider />
         <Link className={mobileItem} to="myorders">
-          <ListItemButton sx={{ textAlign: 'center' }}>
+          <ListItemButton sx={{ textAlign: 'center' , color: 'white'}}>
               <ListItemText>MyOrders</ListItemText>
           </ListItemButton>
         </Link>
         <Divider />
         <Link className={mobileItem} to="payment">
-          <ListItemButton sx={{ textAlign: 'center' }}>
+          <ListItemButton sx={{ textAlign: 'center' , color: 'white'}}>
               <ListItemText>Payment</ListItemText>
           </ListItemButton>
         </Link>
         <Divider />
         {!admin && <Link className={mobileItem} to="reviews">
-          <ListItemButton sx={{ textAlign: 'center' }}>
+          <ListItemButton sx={{ textAlign: 'center' , color: 'white'}}>
               <ListItemText>Reviews</ListItemText>
           </ListItemButton>
         </Link>}
         <Divider />
         <Button onClick={logOut}>
-        <Link className={mobileItem} to="logout">
-          <ListItemButton sx={{ textAlign: 'center' }}>
-              Logout
-          </ListItemButton>
-        </Link>
+          <Link className={mobileItem} to="logout">
+            <ListItemButton sx={{ textAlign: 'center', color: 'white' }}>
+                Logout
+            </ListItemButton>
+          </Link>
         </Button>
         <Divider />
       </List>
       <Divider />
-    </div>
+    </Box>
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
@@ -112,6 +111,7 @@ const {navItem, mobileItem } = useStyle();
           sx={{
             width: { sm: `calc(100% - ${drawerWidth}px)` },
             ml: { sm: `${drawerWidth}px` },
+            background: 'gray'
           }}
         >
           <Toolbar>

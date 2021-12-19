@@ -50,7 +50,7 @@ const ShowReviews = () => {
       ] */
     };
     return (
-        <Container sx={{my: 8}}>
+        <Container sx={{mt: 8, mb:16}}>
             <Typography variant='h4' sx={{pb:5}}> Our Client Voice </Typography>
             <Slider {...settings}>
                 {
