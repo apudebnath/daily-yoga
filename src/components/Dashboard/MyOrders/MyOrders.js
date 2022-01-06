@@ -8,7 +8,7 @@ const MyOrders = () => {
     const {user} = useAuth();
 
     useEffect(() => {
-        const url = `http://localhost:5000/orders?email=${user.email}`;
+        const url = `https://secure-crag-84125.herokuapp.com/orders?email=${user.email}`;
         fetch(url)
         .then(res => res.json())
         .then(data => {
@@ -19,7 +19,7 @@ const MyOrders = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Hey, are you SURE! to DELETE the Order?')
         if(proceed){
-            fetch(`http://localhost:5000/deleteOrder/${id}`,{
+            fetch(`https://secure-crag-84125.herokuapp.com/deleteOrder/${id}`,{
                 method: 'DELETE',
             })
             .then(res => res.json())

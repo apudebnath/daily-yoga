@@ -23,7 +23,7 @@ const Reviews = () => {
             value,
         }
         console.log(reviewData);
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://secure-crag-84125.herokuapp.com/reviews', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

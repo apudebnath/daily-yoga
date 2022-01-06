@@ -36,7 +36,7 @@ function App() {
               <Route exact path="/dashboard" element={<DashboardHome />}></Route>
               <Route path="addproduct" element={<AdminRoute><AddProduct /></AdminRoute>}></Route>
               <Route path="makeadmin" element={<AdminRoute><MakeAdmin /></AdminRoute>}></Route>
-              <Route path="manageallorders" element={<ManageAllOrders />}></Route>
+              <Route path="manageallorders" element={<AdminRoute><ManageAllOrders /></AdminRoute>}></Route>
               <Route path="myorders" element={<MyOrders />}></Route>
               <Route path="payment" element={<Payment />}></Route>
               <Route path="reviews" element={<Reviews />}></Route>
@@ -47,5 +47,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

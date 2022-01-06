@@ -11,7 +11,7 @@ const ManageAllOrders = () => {
     }
     // Show all order from database
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://secure-crag-84125.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => {
             setOrders(data);
@@ -20,7 +20,7 @@ const ManageAllOrders = () => {
 
     // Update order status
     const handleUpdate = (id) => {  
-        fetch(`http://localhost:5000/statusUpdate/${id}`,{
+        fetch(`https://secure-crag-84125.herokuapp.com/statusUpdate/${id}`,{
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -38,7 +38,7 @@ const ManageAllOrders = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Hey, are you SURE! to DELETE the Order?')
         if(proceed){
-            fetch(`http://localhost:5000/deleteOrder/${id}`,{
+            fetch(`https://secure-crag-84125.herokuapp.com/deleteOrder/${id}`,{
                 method: 'DELETE',
             })
             .then(res => res.json())

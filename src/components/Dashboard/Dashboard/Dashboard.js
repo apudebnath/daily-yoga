@@ -35,7 +35,7 @@ function Dashboard(props) {
         textAlign: 'center',
     }
 });
-const {navItem, mobileItem } = useStyle();
+const { mobileItem } = useStyle();
   const drawer = (
     <Box>
       <Toolbar sx={{background: 'orange', display: "flex", justifyContent: 'center', py: 2}}>

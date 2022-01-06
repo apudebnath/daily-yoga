@@ -5,6 +5,7 @@ import BookSession from '../BookSession/BookSession';
 import Challenge from '../Challenge/Challenge';
 import Gallary from '../Gallary/Gallary';
 import Header from '../Header/Header';
+import NewsLetter from '../NewsLetter/NewsLetter';
 import Products from '../Products/Products';
 import ServicePoint from '../ServicePoint/ServicePoint';
 import ShowReviews from '../ShowReviews/ShowReviews';
@@ -17,6 +18,7 @@ const Home = () => {
             <BookSession/>
             <Challenge/>
             <Products/>
+            <NewsLetter/>
             <AnyTime/>
             <ShowReviews/>
             <Gallary/>

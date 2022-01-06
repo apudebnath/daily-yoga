@@ -13,7 +13,7 @@ const Purchase = () => {
     const [orderData, newOrderData] = useState({basicInfo})
     // get data database to ui
     useEffect(() => {
-        const url = (`http://localhost:5000/products/${id}`)
+        const url = (`https://secure-crag-84125.herokuapp.com/products/${id}`)
         fetch(url)
         .then(res => res.json())
         .then(data => setProduct(data))
@@ -34,7 +34,7 @@ const Purchase = () => {
         }
 
         // Send Order data to database
-        fetch('http://localhost:5000/orders',{
+        fetch('https://secure-crag-84125.herokuapp.com/orders',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'
